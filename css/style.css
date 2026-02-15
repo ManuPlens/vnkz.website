@@ -1,3 +1,4 @@
+/* Apelidos para as cores e estilos principais do site, facilitando a manutenção e a consistência visual. */
 :root {
   --bg-dark: #050505;
   --bg-card: #0f0f0f;
@@ -8,16 +9,18 @@
   --text-muted: #555555;
 }
 
-/* reset de css */
+/* Reset Css: Esse bloco remove as margens e preenchimentos padrão dos elementos, ele zera o espaçamento, garatindo que o layout seja consistente em diferentes navegadores. */
+
 * {
-  margin: 0;
+  margin: 0;  
   padding: 0;
   box-sizing: border-box;
 }
+/* Quando voce clica em um link de navegação, a página rola suavemente para a seção correspondente, proporcionando uma experiência de usuário mais agradável e fluida. */
 html {
   scroll-behavior: smooth;
 }
-
+/* Definimos a fonte principal do site e demos algumas opções de fontes se o pc do usuario não rodar a que definimos, o fundo escuro e a cor do texto. O line-height é ajustado para melhorar a legibilidade, e o overflow-x é oculto para evitar barras de rolagem horizontais indesejadas. */ 
 body {
   font-family:
     'Montserrat',
@@ -33,12 +36,14 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+/* Uma caixa invisível que envolve o conteúdo do site, centralizando-o e limitando sua largura máxima para melhorar a legibilidade e a estética. O padding horizontal de 5% garante que o conteúdo não fique colado nas bordas da tela, margin 0 centraliza essa caixa perfeitamente na tela, max width 1300 impede que o site fique esticado em uma tela. */
 .container {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 5%;
 }
+/* Position fixed: A barra de navegação permanece fixa no topo da página, mesmo quando o usuário rola para baixo. z-index: 1000 garante que a barra de navegação fique acima de outros elementos da página. */
 .navbar {
   position: fixed;
   top: 0;
@@ -49,18 +54,21 @@ body {
   z-index: 1000;
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+/* .navscrolled quando o usário rola a página, essa classe é ativada, mudando a cor do menu e adicionando um efeito de desfoqueno fundo. */
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   height: 70px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+/* justify-content space-between: garante que o logo fique alinhado à esquerda e o menu de navegação à direita. align-items center: os itens são alinhados verticalmente ao centro da barra de navegação, width 100%: a barra de navegação ocupa toda a largura da tela, garantindo que o conteúdo seja distribuído de maneira uniforme. */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+/* define a aparência do logo do site. O font-size 1.8rem torna o texto do logo grande o suficiente para se destacar, enquanto o font-weight 900 torna o texto mais negrito e impactante. O letter-spacing -1.5px reduz o espaçamento entre as letras. O text-decoration none remove qualquer sublinhado ou decoração padrão dos links. */
 .logo {
   font-size: 1.8rem;
   font-weight: 900;
@@ -68,15 +76,18 @@ body {
   text-decoration: none;
   color: white;
 }
+/* widht 110px e height 50px definem as dimensões da imagem do logo, garantindo que ela seja exibida em um tamanho adequado para a barra de navegação. */
 .logo img {
-  width: 95px;
+  width: 110px;
   height: 50px;
 }
+/* é a caixa que guarda os links, display flex organiza os itens em linha, list-style none remove as bolinhas da lista, gap 2.5rem adiciona um espaço entre os itens do menu de navegação.  */
 .nav-menu {
   display: flex;
   list-style: none;
   gap: 2.5rem;
 }
+/* A estética de cada link de navegação, text-decoration none remove o sublinhado padrão dos links, color var(--text-gray) define a cor do texto, text-transform uppercase deixa o texto em caixa alta, font-size 0.75rem define um tamanho de fonte pequeno para os links, font-weight 700 torna o texto mais negrito, letter-spacing 2px aumenta o espaçamento entre as letras para criar um efeito mais impactante, e a transition adiciona uma animação suave quando o usuário interage com os links. */
 .nav-link {
   text-decoration: none;
   color: var(--text-gray);
@@ -86,10 +97,12 @@ body {
   letter-spacing: 2px;
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+/* Quando o usuário passa o mouse sobre um link de navegação ou quando o link está ativo (correspondente à seção atual da página), a cor do texto muda para branco, destacando o link e indicando ao usuário onde ele está na navegação do site. */
 .nav-link:hover,
 .nav-link.active {
   color: var(--text-white);
 }
+/* Primeira coisa que voce vê ao entrar no site, a seção de boas vindas, onde tem um título grande, uma descrição e um botão para o usuário clicar. O fundo é uma imagem com um efeito de sobreposição para garantir que o texto seja legível. Height 100vh faz com que a seção ocupe toda a altura da tela, display flex e align-items center centralizam o conteúdo verticalmente, position relative e overflow hidden permitem que os elementos de fundo sejam posicionados corretamente sem afetar o layout geral. */
 .hero {
   height: 100vh;
   display: flex;
@@ -97,6 +110,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+/* A classe .hero-bg é usada para a imagem de fundo, garantindo que ela cubra toda a seção e fique atrás do conteúdo principal. */
 .hero-bg {
   position: absolute;
   top: 0;
@@ -105,12 +119,14 @@ body {
   height: 100%;
   z-index: -1;
 }
+/* coloca a imagem de fundo para cobrir toda a seção, mantendo sua proporção e garantindo que o conteúdo principal seja legível. A opacidade é ajustada para criar um efeito de sobreposição suave, object-fit cover faz com que a imagem preencha o espaço disponível sem distorcer, cortando as partes que excederem as dimensões da seção. */
 .hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.5;
 }
+/* .hero-overlay cria um degradê escuro sobre a imagem de fundo, melhorando o contraste e a legibilidade do texto. O gradiente vai do preto sólido na parte inferior para transparente na parte superior, garantindo que o conteúdo principal se destaque sem obscurecer completamente a imagem de fundo. */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -127,6 +143,7 @@ body {
   margin-bottom: 1.5rem;
   display: block;
 }
+/* font-size clamp faz a fonte ser responsiva, sendo 3rem o tamanho mínimo, 7rem o máximo e 10vw o valor ideal, text transform uppercase deixa o texto em caixa alta, letter-spacing -4px reduz o espaçamento entre as letras para criar um efeito mais compacto e impactante, margin-bottom 2rem adiciona um espaço abaixo do título para separar visualmente da descrição. */
 .hero-title {
   font-size: clamp(3rem, 10vw, 7rem);
   font-weight: 900;
@@ -141,14 +158,16 @@ body {
   margin-bottom: 40px;
   max-width: 600px;
 }
+/* Pinta o texto com um degradê. O background-clip: text faz com que o degradê seja aplicado apenas ao texto, enquanto o -webkit-text-fill-color: transparent torna o preenchimento do texto transparente, permitindo que o degradê seja visível. */
 .title-gradient {
   background: linear-gradient(90deg, #fff, #555);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .text-accent {
-  color: var(--accent);
+  color: var(--text-white);
 }
+/* Estiliza os botões do site, tornando-os visualmente atraentes e interativos. O display inline-block permite que os botões sejam tratados como elementos de bloco, mas ainda possam ser alinhados horizontalmente. O padding define o espaço interno do botão, enquanto a text-decoration none remove o sublinhado padrão dos links. O font-weight 800 torna o texto do botão mais negrito, e o text-transform uppercase deixa o texto em caixa alta. O letter-spacing 2px aumenta o espaçamento entre as letras para criar um efeito mais impactante, e o font-size 0.8rem define um tamanho de fonte adequado para os botões. A transition adiciona uma animação suave quando o usuário interage com o botão, e o border none remove a borda padrão, enquanto cursor pointer indica que o elemento é clicável. */
 .btn {
   display: inline-block;
   padding: 18px 40px;
@@ -165,6 +184,7 @@ body {
   background: var(--text-white);
   color: var(--bg-dark);
 }
+/* transform translateY(-3px) move o botão para cima quando o usuário passa o mouse sobre ele, criando um efeito de elevação. A cor do fundo muda para a cor de destaque definida na variável --accent, e a cor do texto muda para branco para garantir um contraste adequado. */
 .btn-primary:hover {
   background: var(--accent);
   transform: translateY(-3px);
