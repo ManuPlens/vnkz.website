@@ -194,29 +194,35 @@ body {
   transform: translateY(-3px);
   color: var(--text-white);
 }
+/* o section-padding é uma classe utilitária que adiciona um espaçamento vertical consistente entre as seções do site. O padding de 100px em cima e embaixo cria um espaçamento generoso, enquanto o padding horizontal de 0 mantém o conteúdo alinhado com as bordas da seção. */
 .section-padding {
   padding: 100px 0;
 }
+/* o section header é a parte que tem o título da seção, ele tem um margin-bottom de 70px para criar um espaçamento entre o título e o conteúdo da seção. */
 .section-header {
   margin-bottom: 70px;
 }
+/* O título da seção é estilizado com um font-size responsivo usando clamp, que ajusta o tamanho da fonte com base na largura da tela, garantindo que o título seja legível em diferentes dispositivos. O font-weight 900 torna o título mais negrito, enquanto o letter-spacing -2px reduz o espaçamento entre as letras. O text-transform uppercase deixa o título em caixa alta para dar uma aparência mais forte e destacada */
 .section-title {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   letter-spacing: -2px;
   text-transform: uppercase;
 }
+/* o grid é usado para organizar os destaques em um layout responsivo, onde as colunas se ajustam automaticamente com base no tamanho da tela. O gap de 30px cria um espaço consistente entre os itens do grid, garantindo que o layout seja visualmente equilibrado e agradável. */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 30px;
 }
+/* vnkz highlights card serve para estilizar cada bloco de destaque, que é um elemento visual que apresenta informações ou conteúdo específico. O position relative permite que os elementos filhos sejam posicionados em relação a este cartão, o aspect-ratio 16/10 define a proporção da largura para a altura do cartão, garantindo que ele mantenha uma forma consistente. O overflow hidden garante que qualquer conteúdo que exceda as bordas do cartão seja ocultado, e o background var(--bg-card) define a cor de fundo do cartão. */
 .vnkz-highlights-card {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--bg-card);
 }
+/* vnkz img serve para estilizar as imagens dentro dos destaques, garantindo que elas preencham completamente o cartão sem distorcer. O object-fit cover faz com que a imagem preencha o espaço disponível, cortando as partes que excederem as dimensões do cartão, enquanto o filter grayscale(0.4) aplica um efeito de escala de cinza para criar um visual mais estilizado. A transition adiciona uma animação suave quando o usuário interage com a imagem. */
 .vnkz-highlights-img {
   width: 100%;
   height: 100%;
@@ -224,10 +230,12 @@ body {
   filter: grayscale(0.4);
   transition: 0.8s ease;
 }
+/* essa seção serve para criar um efeito de zoom e remover o filtro de escala de cinza quando o usuário passa o mouse sobre o cartão de destaque. O transform scale(1.05) aumenta ligeiramente o tamanho da imagem, criando um efeito de zoom suave, enquanto o filter grayscale(0) remove o filtro de escala de cinza, permitindo que as cores originais da imagem sejam exibidas. */
 .vnkz-highlights-card:hover .vnkz-highlights-img {
   transform: scale(1.05);
   filter: grayscale(0);
 }
+/* essa seção info é usada para exibir informações adicionais sobre o destaque quando o usuário passa o mouse sobre o cartão. O position absolute posiciona a caixa de informações na parte inferior do cartão, enquanto o width 100% garante que ela ocupe toda a largura do cartão. O padding de 40px cria um espaço interno para o conteúdo da caixa de informações, e o background linear-gradient cria um efeito de degradê que vai do transparente na parte superior para um preto mais opaco na parte inferior, melhorando a legibilidade do texto. O transform translateY(15px) move a caixa de informações para baixo, criando um efeito de deslizamento suave quando o usuário passa o mouse sobre o cartão, e a opacity 0 torna a caixa de informações invisível por padrão. A transition adiciona uma animação suave para a transformação e a opacidade quando o usuário interage com o cartão. */
 .vnkz-highlights-info {
   position: absolute;
   bottom: 0;
@@ -239,10 +247,12 @@ body {
   opacity: 0;
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+/* essa seção serve para exibir a caixa de informações quando o usuário passa o mouse sobre o cartão de destaque. O transform translateY(0) move a caixa de informações para sua posição original, enquanto a opacity 1 torna a caixa de informações totalmente visível, permitindo que o usuário leia as informações adicionais sobre o destaque. */
 .vnkz-highlights-card:hover .vnkz-highlights-info {
   transform: translateY(0);
   opacity: 1;
 }
+/* category serve para estilizar a categoria do destaque, que é um elemento de texto que indica a categoria ou tipo de conteúdo apresentado no cartão de destaque. O font-size 0.7rem define um tamanho de fonte pequeno para a categoria, enquanto o font-weight 800 torna o texto mais negrito e impactante. A cor var(--text-vnkz-style) define a cor do texto da categoria, e o letter-spacing 3px aumenta o espaçamento entre as letras. O text-transform uppercase deixa o texto em caixa alta, e o margin-bottom 10px adiciona um espaço abaixo da categoria para separar visualmente do título ou descrição do destaque.  */
 .vnkz-highlights-category {
   font-size: 0.7rem;
   font-weight: 800;
@@ -251,11 +261,13 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+/* o footer é a seção final do site, onde geralmente são exibidas informações de contato, links para redes sociais ou outras informações relevantes. O padding de 80px em cima e embaixo cria um espaçamento generoso, enquanto o border-top adiciona uma linha sutil para separar visualmente o rodapé do restante do conteúdo da página. O text-align center centraliza o conteúdo do rodapé.  */
 .footer {
   padding: 80px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
 }
+/* o footer logo é a imagem do logo que aparece no rodapé do site, width 110px e height 50px definem as dimensões da imagem do logo, garantindo que ela seja exibida em um tamanho adequado para o rodapé. */
 .footer-logo {
   width: 110px;
   height: 50px;
