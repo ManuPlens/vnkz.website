@@ -261,6 +261,24 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+.vnkz-gallery {
+  columns: 3 350px;
+  column-gap: 20px;
+}
+.vnkz_gallery-item {
+  margin-bottom: 20px;
+  break-inside: avoid;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.vnkz-gallery-item img {
+  width: 100%;
+  display: block;
+  transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.vnkz-gallery-item:hover img {
+  transform: scale(1.05);
+}
 /* o footer é a seção final do site, onde geralmente são exibidas informações de contato, links para redes sociais ou outras informações relevantes. O padding de 80px em cima e embaixo cria um espaçamento generoso, enquanto o border-top adiciona uma linha sutil para separar visualmente o rodapé do restante do conteúdo da página. O text-align center centraliza o conteúdo do rodapé.  */
 .footer {
   padding: 80px 0;
@@ -278,5 +296,127 @@ body {
   }
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.lightbox-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 85vh;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.lightbox-caption {
+  margin-top: 15px;
+  color: var(--text-gray);
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--text-white);
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2001;
+  line-height: 1;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  color: var(--text-vnkz-style);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  cursor: pointer;
+  top: 50%;
+  position: absolute;
+  width: auto;
+  padding: 20px;
+  margin-top: -50px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 900;
+  font-size: 30px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2001;
+}
+
+.lightbox-prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.lightbox-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-vnkz-style);
+}
+
+@media (max-width: 768px) {
+  .lightbox-image {
+    max-width: 95%;
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 24px;
+    padding: 10px;
   }
 }
