@@ -272,3 +272,11 @@ body {
   width: 110px;
   height: 50px;
 }
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
