@@ -1,64 +1,140 @@
 <!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>VNKZ | Porfólio</title>
+  </head>
+  <!-- Corpo do Site  -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>VNKZ | Porfólio</title>
-</head>
-<!-- Corpo do Site  -->
-
-<body>
-  <!-- Cabeçalho onde fica a logo e os menus chamados de navigation, navbar, ou options -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#home" class="logo"><img src="assets/logo/vnkz_logo_metalica.png" alt="VNKZ" /></a>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-link active">Início</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-        <li><a href="#galeria" class="nav-link">Galeria</a></li>
-        <li><a href="#sobre" class="nav-link">Sobre</a></li>
-        <li><a href="#servicos" class="nav-link">Serviços</a></li>
-        <li><a href="#contato" class="nav-link">Contato</a></li>
-      </ul>
-    </div>
-  </header>
-  <!-- Fim Cabeçalho -->
-
-  <!-- Início do Conteúdo Principal -->
-  <main id="main-content">
-    <!-- Início da Seção Hero -->
-    <section id="home" class="hero">
-      <div class="hero-bg">
-        <img src="assets/images/bg-hero.jpg.jpeg" alt="hero background" />
-        <div class="hero-overlay"></div>
+  <body>
+    <!-- Cabeçalho onde fica a logo e os menus chamados de navigation, navbar, ou options -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#home" class="logo"
+          ><img src="assets/logo/vnkz_logo_metalica.png" alt="VNKZ"
+        /></a>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Início</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+          <li><a href="#galeria" class="nav-link">Galeria</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
       </div>
-      <div class="container">
-        <div class="hero-content">
-          <span class="hero-line text-accent">Automotive Visual Storytelling</span>
-          <h1 class="hero-title">VITOR <span class="title-gradient">"VNKZ"</span> NAKAZATO</h1>
-          <p class="hero-description">
-            Fotógrafo automotivo especializado em capturar a essência e a
-            beleza dos veículos, transformando cada clique em uma obra de arte
-            visual.</p>
-          <div class="hero-buttons">
-            <!-- finalizar depois a função onclick -->
-            <button class="btn btn-primary" onclick="">Ver Portfólio</button>
+    </header>
+    <!-- Fim Cabeçalho -->
+
+    <!-- Início do Conteúdo Principal -->
+    <main id="main-content">
+      <!-- Início da Seção Hero -->
+      <section id="home" class="hero">
+        <div class="hero-bg">
+          <img src="assets/images/bg-hero.jpg.jpeg" alt="hero background" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-line text-accent"
+              >Automotive Visual Storytelling</span
+            >
+            <h1 class="hero-title">
+              VITOR <span class="title-gradient">"VNKZ"</span> NAKAZATO
+            </h1>
+            <p class="hero-description">
+              Fotógrafo automotivo especializado em capturar a essência e a
+              beleza dos veículos, transformando cada clique em uma obra de arte
+              visual.
+            </p>
+            <div class="hero-buttons">
+              <!-- finalizar depois a função onclick -->
+              <button class="btn btn-primary" onclick="">Ver Portfólio</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Fim da Seção Hero -->
-  </main>
-  <section>
-    <footer>Footer</footer>
-  </section>
-</body>
+      </section>
+      <!-- Fim da Seção Hero -->
+      <section id="portfolio" class="section-padding">
+        <div class="container">
+          <header class="section-header">
+            <span class="hero-line text-accent">Portfólio</span>
+            <h2 class="section-title">
+              Trabalhos em <span class="vnkz-style">Destaque</span>
+            </h2>
+          </header>
+          <div class="grid">
+            <!-- Card  -->
+            <div class="vnkz-highlights-card">
+              <img
+                src="assets/images/audia3.jpeg"
+                alt="Audi A3"
+                class="vnkz-highlights-img"
+              />
+              <div class="vnkz-highlights-info">
+                <span class="vnkz-highlights-category">Rolling Shots</span>
+                <h3>Fotos em movimento</h3>
+              </div>
+            </div>
 
+            <div class="vnkz-highlights-card">
+              <img
+                src="assets/images/andersondick.jpeg"
+                alt="Anderson Dick"
+                class="vnkz-highlights-img"
+              />
+              <div class="vnkz-highlights-info">
+                <span class="vnkz-highlights-category">Anderson Dick</span>
+                <h3>Fueltech</h3>
+              </div>
+            </div>
+
+            <div class="vnkz-highlights-card">
+              <img
+                src="assets/images/porschemacan.jpeg"
+                alt="Porsche Macan"
+                class="vnkz-highlights-img"
+              />
+              <div class="vnkz-highlights-info">
+                <span class="vnkz-highlights-category">Night Session</span>
+                <h3>Fotos noturnas</h3>
+              </div>
+            </div>
+
+            <div class="vnkz-highlights-card">
+              <img
+                src="assets/images/pajerofull.jpg"
+                alt="Pajero Full"
+                class="vnkz-highlights-img"
+              />
+              <div class="vnkz-highlights-info">
+                <span class="vnkz-highlights-category">Rally</span>
+                <h3>Pantanal Expedition</h3>
+              </div>
+            </div>
+            <!-- Card  -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <section>
+      <footer class="footer">
+        <div class="container">
+          <img
+            class="footer-logo"
+            src="assets/logo/vnkz_logo_metalica.png"
+            alt="VNKZ"
+          />
+          <p>&copy; 2026 VNKZ. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </section>
+  </body>
 </html>
