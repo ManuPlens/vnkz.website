@@ -55,8 +55,16 @@
               visual.
             </p>
             <div class="hero-buttons">
-              <!-- finalizar depois a função onclick -->
-              <button class="btn btn-primary" onclick="">Ver Portfólio</button>
+              <button
+                class="btn btn-primary"
+                onclick="
+                  document
+                    .getElementById('portfolio')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+              >
+                Ver Portfólio
+              </button>
             </div>
           </div>
         </div>
