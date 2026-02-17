@@ -279,6 +279,49 @@ body {
 .vnkz-gallery-item:hover img {
   transform: scale(1.05);
 }
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.about-img-style {
+  width: 100%;
+  filter: grayscale(1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+}
+.about-text {
+  color: var(--text-gray);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.stats-container {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+}
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.stats-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 /* o footer é a seção final do site, onde geralmente são exibidas informações de contato, links para redes sociais ou outras informações relevantes. O padding de 80px em cima e embaixo cria um espaçamento generoso, enquanto o border-top adiciona uma linha sutil para separar visualmente o rodapé do restante do conteúdo da página. O text-align center centraliza o conteúdo do rodapé.  */
 .footer {
   padding: 80px 0;
@@ -418,5 +461,11 @@ body {
   .lightbox-next {
     font-size: 24px;
     padding: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 }

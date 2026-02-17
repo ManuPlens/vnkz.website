@@ -131,6 +131,7 @@
           </div>
         </div>
       </section>
+      <!-- Fotos da galeria -->
       <section id="galeria" class="section-padding">
         <div class="container">
           <header class="section-header">
@@ -213,6 +214,42 @@
           </div>
         </div>
       </section>
+      <section id="sobre" class="section-padding">
+        <div class="container">
+          <div class="about-wrapper">
+            <div class="about-image">
+              <img
+                src="assets/images/vitor-nakazato.jpeg"
+                alt="Vitor Nakazato"
+                class="about-img-style"
+              />
+            </div>
+            <div>
+              <span class="hero-line text-accent">A arte além das lentes</span>
+              <h2 class="section-title">
+                VITOR <span class="text-accent">"VNKZ"</span> NAKAZATO
+              </h2>
+              <div class="about-text">
+                <p>
+                  Desde 2019, a VNKZ atua no mercado automotivo produzindo
+                  fotografias e vídeos publicitários de alto impacto, ajudando
+                  empresas a se posicionarem com elegância e profissionalismo.
+                </p>
+              </div>
+              <div class="stats-container">
+                <div>
+                  <h4 class="stats-number">7+</h4>
+                  <p class="stats-label">Anos de Experiência</p>
+                </div>
+                <div>
+                  <h4 class="stats-number">1000+</h4>
+                  <p class="stats-label">Fotos publicadas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Fim do Conteúdo Principal -->
 
@@ -227,7 +264,9 @@
         <p>&copy; 2026 VNKZ. Todos os direitos reservados.</p>
       </div>
     </footer>
+    <!-- Fim do Rodapé    -->
 
+    <!-- pop-up" para exibir imagens em tamanho maior.  -->
     <div id="lightbox" class="lightbox">
       <span class="lightbox-close">&times;</span>
 
@@ -240,7 +279,7 @@
       <a class="lightbox-next">&#10095;</a>
     </div>
     <script src="scripts/lightbox.js"></script>
-
+    <script src="scripts/count.js"></script>
     <script>
       window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
