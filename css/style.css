@@ -328,6 +328,14 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
 }
+.footer-madeby {
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  margin-top: 4px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 /* o footer logo é a imagem do logo que aparece no rodapé do site, width 110px e height 50px definem as dimensões da imagem do logo, garantindo que ela seja exibida em um tamanho adequado para o rodapé. */
 .footer-logo {
   width: 110px;
