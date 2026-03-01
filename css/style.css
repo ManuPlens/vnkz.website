@@ -341,6 +341,7 @@ body {
   width: 110px;
   height: 50px;
 }
+/* media serve para ajustar o layout do site em telas menores, nav menu display none tira o nav em telas menores */
 @media (max-width: 900px) {
   .nav-menu {
     display: none;
@@ -349,6 +350,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* lightbox serve para exibir imagens em um modal quando clicadas */
 .lightbox {
   display: none;
   position: fixed;
@@ -364,6 +366,7 @@ body {
   align-items: center;
   animation: fadeIn 0.3s ease;
 }
+/* keyframes serve para denifinir animações css */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -372,6 +375,7 @@ body {
     opacity: 1;
   }
 }
+/* essa seção lightbox serve para estilizar o conteúdo do modal de exibição de imagens, garantindo que ele seja centralizado e responsivo. O max-width 90% e max-height 90% garantem que a imagem se ajuste ao tamanho da tela sem ultrapassar os limites do modal, enquanto o display flex e as propriedades de alinhamento centralizam o conteúdo tanto vertical quanto horizontalmente. O padding 0 remove qualquer espaço interno adicional, permitindo que a imagem ocupe todo o espaço disponível dentro do modal. */
 .lightbox-content {
   position: relative;
   margin: auto;
