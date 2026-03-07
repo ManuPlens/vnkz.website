@@ -385,6 +385,7 @@ body {
   align-items: center;
   animation: fadeIn 0.3s ease;
 }
+/* keyframes serve para denifinir animações css */
 @keyframes fadeIn {
   from {
     opacity: 0;
