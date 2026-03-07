@@ -261,24 +261,36 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+/* gallery serve para estilizar a galeria de imagens, que é uma seção onde várias imagens são exibidas em uma grade. O columns: 3 350px define três colunas com largura de 350px cada, enquanto o column-gap: 20px adiciona um espaçamento de 20px entre as colunas. */
 .vnkz-gallery {
   columns: 3 350px;
   column-gap: 20px;
 }
-.vnkz_gallery-item {
-  margin-bottom: 20px;
+/* gallery-item serve para estilizar cada item da galeria de imagens, que é um elemento individual que contém uma imagem. O margin-bottom: 10px adiciona um espaço abaixo de cada item, enquanto o break-inside: avoid impede que o item seja dividido entre colunas em casos de quebra de página. O overflow: hidden esconde qualquer conteúdo que ultrapasse os limites do item, e o border: 1px solid rgba(255, 255, 255, 0.05) adiciona uma borda sutil ao redor de cada item. */
+.vnkz-gallery-item {
+  margin-bottom: 10px;
   break-inside: avoid;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  
 }
+/* gallery-image serve para estilizar a imagem dentro de cada item da galeria de imagens. O width: 100% faz com que a imagem ocupe toda a largura do item, enquanto o display: block evita espaçamentos indesejados. O transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) adiciona uma transição suave quando a imagem é dimensionada. */
 .vnkz-gallery-item img {
   width: 100%;
   display: block;
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+/* gallery-item:hover serve para estilizar o item da galeria de imagens quando o usuário passa o mouse sobre ele. O border-color: var(--accent-dim) muda a cor da borda para a cor de destaque, enquanto o box-shadow: 0 0 25px var(--accent-dim) adiciona uma sombra ao redor do item. O cursor: pointer altera o cursor do mouse para uma mão, indicando que o item é clicável. */
+.vnkz-gallery-item:hover {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 25px var(--accent-dim);
+  cursor: pointer;
+}
+/* gallery-item:hover img serve para estilizar a imagem dentro do item da galeria de imagens quando o usuário passa o mouse sobre ele. O transform: scale(1.05) aumenta o tamanho da imagem em 5%, criando um efeito de zoom. */
 .vnkz-gallery-item:hover img {
   transform: scale(1.05);
 }
+/* about-wrapper serve para estilizar o contêiner principal da seção sobre, que é uma grade onde as informações sobre o fotógrafo são exibidas. O display: grid cria uma grade, enquanto o grid-template-columns: 1fr 1fr define duas colunas de igual largura. O gap: 100px adiciona um espaçamento de 100px entre os itens da grade, e o align-items: center centraliza os itens verticalmente. */
 .about-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -286,6 +298,7 @@ body {
   align-items: center;
   animation: fadeIn 1s ease-in-out;
 }
+/* fadeIn serve para adicionar uma animação de fade in aos elementos da página. O from define o estado inicial com opacidade 0, enquanto o to define o estado final com opacidade 1. */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -294,12 +307,14 @@ body {
     opacity: 1;
   }
 }
+/* about-img-style serve para estilizar a imagem dentro da seção sobre, que é um elemento individual que contém uma imagem. O width: 100% faz com que a imagem ocupe toda a largura do item, enquanto o filter: grayscale(1) adiciona um efeito em tons de cinza. O border: 1px solid rgba(255, 255, 255, 0.1) adiciona uma borda sutil ao redor da imagem, e o border-radius: 50px arredonda os cantos da imagem. */
 .about-img-style {
   width: 100%;
   filter: grayscale(1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
 }
+/* about-text serve para estilizar o texto dentro da seção sobre, que é um elemento individual que contém informações sobre o fotógrafo. O color: var(--text-gray) define a cor do texto, enquanto o margin-top: 30px adiciona um espaço acima do texto. O display: flex e o flex-direction: column criam uma disposição em coluna para os elementos filhos. */
 .about-text {
   color: var(--text-gray);
   margin-top: 30px;
@@ -307,15 +322,18 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+/* stats-container serve para estilizar o contêiner dos números de estatísticas, que é uma grade onde os números são exibidos. O display: flex cria uma disposição flexível, enquanto o gap: 50px adiciona um espaçamento de 50px entre os itens. O margin-top: 40px adiciona um espaço acima do contêiner. */
 .stats-container {
   display: flex;
   gap: 50px;
   margin-top: 40px;
 }
+/* stats-number serve para estilizar os números de estatísticas, que são exibidos no contêiner. O font-size: 2.5rem define o tamanho da fonte, enquanto o font-weight: 900 adiciona peso à fonte. */
 .stats-number {
   font-size: 2.5rem;
   font-weight: 900;
 }
+/* stats-label serve para estilizar a legenda dos números de estatísticas, que são exibidos no contêiner. O font-size: 0.7rem define o tamanho da fonte, enquanto o color: var(--text-muted) define a cor do texto. O text-transform: uppercase transforma o texto em letras maiúsculas, e o letter-spacing: 2px adiciona um espaçamento entre as letras. */
 .stats-label {
   font-size: 0.7rem;
   color: var(--text-muted);
@@ -328,11 +346,12 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
 }
+/* footer-madeby serve para estilizar o texto de crédito no rodapé do site, que é um elemento individual que contém informações sobre o criador do site. O color: var(--text-muted) define a cor do texto, enquanto o font-size: 0.6rem define o tamanho da fonte. O margin-top: 4px adiciona um espaço acima do texto, e o opacity: 0.7 adiciona transparência ao texto. */
 .footer-madeby {
   color: var(--text-muted);
   font-size: 0.6rem;
   margin-top: 4px;
-  opacity: 0.7;
+  opacity: 0.9;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -341,6 +360,7 @@ body {
   width: 110px;
   height: 50px;
 }
+/* media serve para definir estilos específicos para telas com largura máxima de 900px. */
 @media (max-width: 900px) {
   .nav-menu {
     display: none;
@@ -349,6 +369,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* lightbox serve para estilizar o modal de visualização de imagens, que é um elemento que aparece quando o usuário clica em uma imagem da galeria. O display: none define que o elemento está escondido por padrão, enquanto o position: fixed posiciona-o de forma fixa na tela. O z-index: 2000 garante que o elemento esteja acima de outros elementos na página. O left: 0 e o top: 0 posicionam o elemento no canto superior esquerdo da tela. */
 .lightbox {
   display: none;
   position: fixed;
@@ -372,6 +393,7 @@ body {
     opacity: 1;
   }
 }
+/* lightbox-content serve para estilizar o conteúdo do modal de visualização de imagens. O position: relative posiciona-o de forma relativa, enquanto o margin: auto centraliza-o horizontalmente. O padding: 0 remove o preenchimento interno, e o max-width: 90% define a largura máxima do conteúdo. */
 .lightbox-content {
   position: relative;
   margin: auto;
@@ -383,6 +405,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+/* lightbox-image serve para estilizar a imagem dentro do modal de visualização de imagens. O display: block define que o elemento é exibido como um bloco, enquanto o max-width: 100% e o max-height: 85vh definem as dimensões máximas da imagem. O border: 1px solid rgba(255, 255, 255, 0.2) adiciona uma borda sutil à imagem. */
 .lightbox-image {
   display: block;
   max-width: 100%;
@@ -401,6 +424,7 @@ body {
     opacity: 1;
   }
 }
+/* lightbox-caption serve para estilizar o texto de legenda dentro do modal de visualização de imagens. */
 .lightbox-caption {
   margin-top: 15px;
   color: var(--text-gray);
@@ -408,6 +432,7 @@ body {
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
+/* lightbox-close serve para estilizar o botão de fechar dentro do modal de visualização de imagens. */
 .lightbox-close {
   position: absolute;
   top: 20px;
@@ -420,14 +445,15 @@ body {
   z-index: 2001;
   line-height: 1;
 }
-
+/* lighbox-close:focus serve para estilizar o botão de fechar quando está em foco */
 .lightbox-close:hover,
 .lightbox-close:focus {
   color: var(--text-vnkz-style);
   text-decoration: none;
   cursor: pointer;
+  /*  */
 }
-
+/* lightbox-prev e lightbox-next servem para estilizar os botões de navegação dentro do modal de visualização de imagens. */
 .lightbox-prev,
 .lightbox-next {
   cursor: pointer;
@@ -454,12 +480,13 @@ body {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
+/* lightbox-prev:hover e lightbox-next:hover servem para estilizar os botões de navegação quando estão em hover */
 .lightbox-prev:hover,
 .lightbox-next:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--text-vnkz-style);
 }
+/* service-card serve para estilizar os cartões de serviço na página. O background: var(--bg-card) define a cor de fundo, enquanto o padding: 50px adiciona preenchimento interno. O border: 1px solid rgba(255, 255, 255, 0.05) adiciona uma borda sutil. */
 .service-card {
   background: var(--bg-card);
   padding: 50px;
@@ -470,22 +497,27 @@ body {
   transform: translateY(-5px);
   border-color: var(--accent-dim);
 }
+/* service-title serve para estilizar o título dos cartões de serviço. */
 .service-title {
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
+/* service-description serve para estilizar a descrição dos cartões de serviço. */
 .service-description {
   color: var(--text-gray);
   font-size: 0.9rem;
 }
+/* contact-wrapper serve para estilizar o contêiner dos elementos de contato na página. O display: grid define um layout de grade, enquanto o grid-template-columns: 1fr 1fr cria duas colunas de igual tamanho. O gap: 100px adiciona espaçamento entre os elementos da grade. */
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
+/* form-group serve para estilizar o contêiner dos campos do formulário na página. */
 .form-group {
   margin-bottom: 25px;
 }
+/* form-group-label serve para estilizar o rótulo dos campos do formulário na página. */
 .form-group-label {
   display: block;
   font-size: 0.7rem;
@@ -495,6 +527,7 @@ body {
   margin-bottom: 10px;
   color: var(--text-gray);
 }
+/* form-control serve para estilizar os campos do formulário na página. */
 .form-control {
   width: 100%;
   background: #111;
@@ -503,30 +536,36 @@ body {
   color: var(--text-white);
   outline: none;
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
+} 
 .form-control:focus {
   border-color: var(--text-vnkz-style);
 }
+/* contact-info-block serve para estilizar o contêiner das informações de contato na página. */
 .contact-info-block {
   margin-bottom: 40px;
 }
+/* contact-label serve para estilizar o rótulo das informações de contato na página. */
 .contact-label {
   font-size: 0.7rem;
 }
+/* contact-description serve para estilizar a descrição das informações de contato na página. */
 .contact-description {
   color: var(--text-gray);
   font-size: 1.1rem;
   margin: 30px 0 60px;
 }
+/* contact-value serve para estilizar o valor das informações de contato na página. */
 .contact-value {
   font-size: 1.5rem;
   font-weight: 700;
 }
+/* social-links serve para estilizar o contêiner dos links de redes sociais na página. */
 .social-links {
   display: flex;
   gap: 20px;
   margin-top: 15px;
 }
+/* social-link serve para estilizar os links de redes sociais na página. */
 .social-link {
   display: flex;
   color: var(--text-white);
@@ -538,20 +577,23 @@ body {
 .social-link:hover {
   color: var(--text-vnkz-style);
 }
+/* social-icon serve para estilizar os ícones das redes sociais na página. */
 .social-icon {
   width: 30px;
   height: 30px;
   margin-right: 5px;
 }
+/* contact-form-container serve para estilizar o contêiner do formulário de contato na página. */
 .contact-form-container {
   background: var(--bg-card);
   padding: 50px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
+/* full-width-btn serve para estilizar o botão de largura completa na página. */
 .full-width-btn {
   width: 100%;
 }
-
+/* media max-width: 768px serve para estilizar a página em dispositivos com largura máxima de 768px. */
 @media (max-width: 768px) {
   .contact-wrapper {
     grid-template-columns: 1fr;
