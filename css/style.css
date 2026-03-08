@@ -9,7 +9,6 @@
   --text-muted: #555555;
   --text-vnkz-style: #6d28d9;
 }
-
 /* Reset Css: Esse bloco remove as margens e preenchimentos padrão dos elementos, ele zera o espaçamento, garatindo que o layout seja consistente em diferentes navegadores. */
 
 * {
@@ -162,6 +161,7 @@ body {
 /* Pinta o texto com um degradê. O background-clip: text faz com que o degradê seja aplicado apenas ao texto, enquanto o -webkit-text-fill-color: transparent torna o preenchimento do texto transparente, permitindo que o degradê seja visível. */
 .title-gradient {
   background: linear-gradient(90deg, #fff, #555);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -217,10 +217,25 @@ body {
 }
 /* vnkz highlights card serve para estilizar cada bloco de destaque, que é um elemento visual que apresenta informações ou conteúdo específico. O position relative permite que os elementos filhos sejam posicionados em relação a este cartão, o aspect-ratio 16/10 define a proporção da largura para a altura do cartão, garantindo que ele mantenha uma forma consistente. O overflow hidden garante que qualquer conteúdo que exceda as bordas do cartão seja ocultado, e o background var(--bg-card) define a cor de fundo do cartão. */
 .vnkz-highlights-card {
+  width: 100%;
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--bg-card);
+}
+.carrossel-slide {
+  display: flex;
+  width: 100%;
+  transition: transform 0.8s ease-in-out;
+  gap: 0;
+  align-items: center;
+}
+.carrossel-slide img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  
 }
 /* vnkz img serve para estilizar as imagens dentro dos destaques, garantindo que elas preencham completamente o cartão sem distorcer. O object-fit cover faz com que a imagem preencha o espaço disponível, cortando as partes que excederem as dimensões do cartão, enquanto o filter grayscale(0.4) aplica um efeito de escala de cinza para criar um visual mais estilizado. A transition adiciona uma animação suave quando o usuário interage com a imagem. */
 .vnkz-highlights-img {
@@ -232,7 +247,6 @@ body {
 }
 /* essa seção serve para criar um efeito de zoom e remover o filtro de escala de cinza quando o usuário passa o mouse sobre o cartão de destaque. O transform scale(1.05) aumenta ligeiramente o tamanho da imagem, criando um efeito de zoom suave, enquanto o filter grayscale(0) remove o filtro de escala de cinza, permitindo que as cores originais da imagem sejam exibidas. */
 .vnkz-highlights-card:hover .vnkz-highlights-img {
-  transform: scale(1.05);
   filter: grayscale(0);
 }
 /* essa seção info é usada para exibir informações adicionais sobre o destaque quando o usuário passa o mouse sobre o cartão. O position absolute posiciona a caixa de informações na parte inferior do cartão, enquanto o width 100% garante que ela ocupe toda a largura do cartão. O padding de 40px cria um espaço interno para o conteúdo da caixa de informações, e o background linear-gradient cria um efeito de degradê que vai do transparente na parte superior para um preto mais opaco na parte inferior, melhorando a legibilidade do texto. O transform translateY(15px) move a caixa de informações para baixo, criando um efeito de deslizamento suave quando o usuário passa o mouse sobre o cartão, e a opacity 0 torna a caixa de informações invisível por padrão. A transition adiciona uma animação suave para a transformação e a opacidade quando o usuário interage com o cartão. */
@@ -272,7 +286,6 @@ body {
   break-inside: avoid;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  
 }
 /* gallery-image serve para estilizar a imagem dentro de cada item da galeria de imagens. O width: 100% faz com que a imagem ocupe toda a largura do item, enquanto o display: block evita espaçamentos indesejados. O transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) adiciona uma transição suave quando a imagem é dimensionada. */
 .vnkz-gallery-item img {
@@ -537,7 +550,7 @@ body {
   color: var(--text-white);
   outline: none;
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-} 
+}
 .form-control:focus {
   border-color: var(--text-vnkz-style);
 }
